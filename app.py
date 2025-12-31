@@ -9,6 +9,10 @@ DEFAULT_XLSX = "CSGG.xlsx"  # keep in repo root next to app.py
 
 st.set_page_config(page_title="PET + PCR + CO₂ (Gigaton-style)", page_icon="♻️", layout="wide")
 st.title("♻️ PET + PCR + CO₂ Calculator (Gigaton-style)")
+if st.sidebar.button("Clear cache"):
+    st.cache_data.clear()
+    st.rerun()
+
 st.caption("Totals in pounds, avoided CO₂ in metric tons. Batch upload supported.")
 
 
